@@ -32,7 +32,6 @@ const changeColor = (e) => {
   switch(currentButtonSelected) {
     case CLICK_TYPES.COLOR: {
       const colorInputElement = document.querySelector('.colorPicker')
-      console.log(colorInputElement.value)
       gridColor = colorInputElement.value;
       break;
     }
@@ -111,7 +110,7 @@ const rangeSlider = (e) => {
 
 const sliderEvent = () => {
   const slider = document.querySelector('.slider')
-  setSliderValue(slider.value)
+  setSliderTextValue(slider.value)
   changeGrid(slider.value)
   slider.addEventListener('input', rangeSlider)
 }
